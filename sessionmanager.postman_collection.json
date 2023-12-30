@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "d0641164-da7c-41d0-8dcd-4ec74549b6ac",
+		"name": "SessionManager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25280603",
+		"_collection_link": "https://lunar-rocket-859585.postman.co/workspace/ONDC-TS-v2.0~bb44ec8b-0cb3-4ea5-96f1-f36a63c20511/collection/25280603-d0641164-da7c-41d0-8dcd-4ec74549b6ac?action=share&source=collection_link&creator=25280603"
+	},
+	"item": [
+		{
+			"name": "Sessions",
+			"item": [
+				{
+					"name": "Add Sessions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"online\",\r\n    \"date\": \"30/12/2023\",\r\n    \"timeSlot\": \"22:00\",\r\n    \"patientId\": \"658ffa349985c4241e06d529\",\r\n    \"therapistId\": \"658ffcaaebb87b85c6c6c6ca\",\r\n    \"details\":\"anxiety depression due to world cup loss\",\r\n    \"onlineSessionLink\": \"https://meet.google.com/dsjei67242g\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/session"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Sessions",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"online\",\r\n    \"date\": \"31/12/2023\",\r\n    \"timeSlot\": \"19:30\",\r\n    \"patientId\": \"658fb39832ab8ed5da56a10f\",\r\n    \"therapistId\": \"658fc260f107b140d3dc2c24\",\r\n    \"details\": \"anxiety depression due to world cup loss\",\r\n    \"onlineSessionLink\": \"https://meet.google.com/dsjei67242g\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/session/658fe94ff2b2bec438279564"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Sessions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/session"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Sessions By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/session/658fcc530063cbc9ab9f76de"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Sessions",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/api/session/658f0818a42f5e9447767261a"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patients",
+			"item": [
+				{
+					"name": "Add Patient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Rohit Sharma\",\r\n    \"email\": \"rohit.sharma@teamindia.com\",\r\n    \"mobile\": \"9087687611\",\r\n    \"isContactSame\": false,\r\n    \"whatsApp\": \"4323212323\",\r\n    \"address\": \"Mumbai\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/patient"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Patient",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Rohit Sharma\",\r\n    \"email\": \"rohit.sharma@teamindia.com\",\r\n    \"mobile\": \"9087687645\",\r\n    \"isContactSame\": false,\r\n    \"whatsApp\": \"1234567890\",\r\n    \"address\": \"India\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/patient/658ffbf3ebb87b85c6c6c6b5"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/patient"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/patient/658ffa349985c4241e06d529"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete patient",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/api/patient/658ffbf3ebb87b85c6c6c6b5"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Therapist",
+			"item": [
+				{
+					"name": "Add Therapist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test2\",\r\n    \"email\": \"test2@test.com\",\r\n    \"mobile\": \"9949892212\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/therapist"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Therapist",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test2222\",\r\n    \"email\": \"test222222@test.com\",\r\n    \"mobile\": \"1111111112\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/therapist/658ffcaaebb87b85c6c6c6ca"
+					},
+					"response": []
+				},
+				{
+					"name": "Get therapist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/therapist"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Therapist By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/therapist/658ffcaaebb87b85c6c6c6ca"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Therapist",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/api/therapist/658fc260f107b140d3dc2c24"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
