@@ -26,7 +26,7 @@ export const addPatient = async (req: Request, res: Response) => {
             whatsApp: whatsAppNo,
         })
         await newPatient.save();
-        apiSuccess(200, config.PATIENT.ADD, res, { _id: newPatient._id });
+        apiSuccess(201, config.PATIENT.ADD, res, { _id: newPatient._id });
         return;
     } catch (error: any) {
         apiError(config.SOMETHINGWENTWRONG, res, error, __filename, "addPatient");

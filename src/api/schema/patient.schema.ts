@@ -37,7 +37,7 @@ const patientParamPayload = {
         id: string().refine((value) => {
             return mongoose.Types.ObjectId.isValid(value)
         }, {
-            message: 'Invalid patient Id in params'
+            message: 'Invalid patient Id in params',
         })
     })
 };

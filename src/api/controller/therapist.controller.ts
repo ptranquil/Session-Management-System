@@ -25,7 +25,7 @@ export const addTherapist = async (req: Request, res: Response) => {
             ...data
         })
         await newPatient.save();
-        apiSuccess(200, config.THERAPIST.ADD, res, { _id: newPatient._id });
+        apiSuccess(201, config.THERAPIST.ADD, res, { _id: newPatient._id });
         return;
     } catch (error: any) {
         apiError(config.SOMETHINGWENTWRONG, res, error, __filename, "addTherapist");

@@ -25,4 +25,4 @@ DATABASE_NAME = "test"
 
 ## Entity-Relationship diagram
 
-![alt text](er_diagram.png)
+![alt text](sessionManagement_erdiagram.png)
